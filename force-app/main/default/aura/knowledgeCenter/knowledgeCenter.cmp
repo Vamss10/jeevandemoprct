@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<lightning:workspaceAPI aura:id="workspace"/>
+    <div>
+      Knowledge Center
+        
+         <lightning:buttonIcon iconName="utility:expand" variant="brand"   title="Expand" onclick="{!c.clickhandler}" />
+       </div>
+</aura:component>

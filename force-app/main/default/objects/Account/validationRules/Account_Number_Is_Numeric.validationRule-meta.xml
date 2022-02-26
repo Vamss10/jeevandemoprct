@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Number_Is_Numeric</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISBLANK(AccountNumber )   ||  NOT(ISNUMBER( AccountNumber ) ) ||  LEN( AccountNumber )  &lt;= 7</errorConditionFormula>
+    <errorDisplayField>AccountNumber</errorDisplayField>
+    <errorMessage>Enter proper Account Number with more that 7 digits</errorMessage>
+</ValidationRule>

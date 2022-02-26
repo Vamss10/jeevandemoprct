@@ -1,0 +1,10 @@
+<aura:component >
+	<aura:attribute name = "AccAccount" type = "Account" default = "{
+                                                                    sobjectname : 'Account',
+                                                                    Name :'Yoo'}"/>
+    <aura:registerEvent name = "SamAccount" type = "c:CompEvent"/>
+    <lightning:input name="Name" label="Name" value = "{!v.AccAccount.Name}"/>
+     <lightning:button variant="brand" label="Save IT" onclick="{!c.SaveAccount}"/>
+    
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<!--<lightning:button variant="brand" label="Details" onclick="{!c.handleClick }" />
+    {!v.body}-->
+ 
+    <lightning:recordEditForm objectApiName="Account">
+        <lightning:messages />
+        <lightning:inputField fieldName="Name" value="My Field Value"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+    </lightning:recordEditForm>
+</aura:component>

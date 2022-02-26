@@ -1,0 +1,4 @@
+<aura:component >
+<!--	<aura:registerEvent name = "CompEvent" type = "c:ApplicationEvent"/>-->
+     <lightning:button variant="brand" label="ChildAppEvent" onclick="{! c.ChildAppEvent}"/>
+</aura:component>

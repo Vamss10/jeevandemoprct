@@ -1,0 +1,13 @@
+<aura:component >
+        <aura:attribute name = "cases" type = "case" default = "{
+                                                               sobjectname : 'case',
+                                                               Status : 'New',
+                                                               Origin : 'Phone',
+                                                               Subject : 'Hey Yoo Bro..!'}"/>
+	<lightning:input name="Status" label="Status" required = "true" value = "{!v.cases.Status}" />
+    <lightning:input name="Origin" label="Origin" required = "true"  value = "{!v.cases.Origin}"/>
+    <lightning:input name="Subject" label="Subject" value = "{!v.cases.Subject}"/>
+    <c:ChildMethodComp aura:id = "ChildComp"/>
+     <lightning:button variant="success" label="Create Case" onclick="{! c.handleClick }"/>
+    
+</aura:component>

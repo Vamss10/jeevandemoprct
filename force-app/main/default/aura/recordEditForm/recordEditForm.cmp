@@ -1,0 +1,52 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+   <!-- <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Contact">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+        <lightning:messages />
+        <lightning:outputField fieldName="AccountId" />
+        <lightning:inputField fieldName="FirstName" />
+        <lightning:inputField fieldName="LastName" />
+        <lightning:inputField fieldName="Email" />
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+        </div>
+        </div>
+    </lightning:recordEditForm>
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Contact">
+        <lightning:messages />
+        <lightning:outputField fieldName="AccountId" />
+        <lightning:outputField fieldName="FirstName" />
+        <lightning:outputField fieldName="LastName" />
+        <lightning:outputField fieldName="Email" />
+    </lightning:recordViewForm>-->
+  <!--  <lightning:recordEditForm
+        objectApiName="Account"
+        onload="{!c.handleCreateLoad}">
+    <lightning:messages />
+    <lightning:inputField aura:id="nameField" fieldName="Name"/>
+    <lightning:button class="slds-m-top_small" type="submit" label="Create new" onClick="{!c.reset}"/>
+        </lightning:recordEditForm>-->
+  <!--  <lightning:recordForm
+        recordId="{!v.recordId}"
+        objectApiName="Account"
+        layoutType="Full"
+                            columns="1"
+        mode="readonly" />-->
+    <!--  <aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Industry']" />
+    <lightning:recordForm
+        aura:id="myRecordForm"
+        recordId="{!v.recordId}"
+        objectApiName="Account"
+        fields="{!v.fields}"
+        columns="2"
+        mode="edit"
+        onsubmit="{!c.handleSubmit}"/>-->
+     <aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Industry']" />
+            <aura:attribute name="recordId" type="String"/>
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+
+            <lightning:recordForm
+                    objectApiName="Account"
+                    fields="{!v.fields}"
+                    onsuccess="{!c.handleSuccess}" />
+</aura:component>

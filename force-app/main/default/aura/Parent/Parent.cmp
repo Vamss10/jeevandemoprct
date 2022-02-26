@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name = "parent" type = "string" default = "I am Default Parent"/>
+    <p>This is paragrah in parent comp</p>
+    <c:Child1 child1 = "i am child1 inside parent"></c:Child1><br/>
+    <!--{!v.parent}<br/>-->
+    <c:Child2 child2 = "{#v.parent}"></c:Child2><br/>
+</aura:component>

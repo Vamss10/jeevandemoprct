@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:method name = "SamMethod" action ="{!c.getMessage}" access = "public">
+        <aura:attribute name = "Name" type = "case"/>
+       
+    </aura:method>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,force:hasSobjectName">
+	<p>This is a inside Quick Action</p>
+    {!v.recordId}<br/>
+    {!v.sObjectName}
+    <lightning:button label = "close Action" onclick="{!c.doClose}"/>
+</aura:component>

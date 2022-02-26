@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:attribute name ="parmsg" type ="String" default = "I am from the Parent Application"/>
+    <aura:handler event = "c.ApplicationEvent" action ="{!c.handleevent}"/>
+    {!v.parmsg}
+</aura:component>

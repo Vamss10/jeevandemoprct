@@ -1,0 +1,18 @@
+<template>
+    <h1>THIS IS A MAP COMPONENT</h1>
+    <lightning-input type="search" label="Find Here Address" onkeyup={keyhandler}></lightning-input>
+    <div class="slds-box">
+        <template if:true={mapMarkers.length}>
+            <lightning-map 
+                map-markers={mapMarkers}
+                markers-title={markersTitle}
+                onmarkerselect={callMarkerHandler}
+                selected-marker-value={selectedMarker}>
+            </lightning-map>
+        </template>
+        <template if:false={mapMarkers.length}>
+            <div>No Account Found</div>
+        </template>
+        
+    </div>
+</template>

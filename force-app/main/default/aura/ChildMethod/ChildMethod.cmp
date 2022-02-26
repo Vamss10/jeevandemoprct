@@ -1,0 +1,8 @@
+<aura:component >
+	<aura:method name = "samplemethod" action ="{!c.getMessage}" access = "public">
+        <aura:attribute name = "Names" type = "String" default = "This is default from Names"/>
+        <aura:attribute name = "Name" type = "String" default = "This is default from Name"/>
+        
+</aura:method>
+  
+</aura:component>

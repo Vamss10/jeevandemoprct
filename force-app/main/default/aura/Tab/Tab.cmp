@@ -1,0 +1,13 @@
+<aura:component >
+	 <lightning:tabset variant="scoped" selectedTabId="Con">
+        <lightning:tab label="Account" Id = "Acc">
+            One Account Content !
+        </lightning:tab>
+        <lightning:tab label="Contact" Id = "Con">
+            Two Contact Content !
+        </lightning:tab>
+        <lightning:tab label="Opportunity" Id ="Opp">
+            Three Opportunity Content !
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

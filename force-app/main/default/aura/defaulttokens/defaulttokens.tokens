@@ -1,0 +1,3 @@
+<aura:tokens>
+	<aura:token name = "clss" value = "cyan"></aura:token>
+</aura:tokens>

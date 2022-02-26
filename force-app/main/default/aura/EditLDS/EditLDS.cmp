@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="AccFields" type = "Account"/>
+    <aura:attribute name = "AccErrors" type = "String"/>
+    <force:recordData aura:id = "AccRec" recordId = "{!v.recordId}" layoutType = "COMPACT"
+                      fields="Name,Description,Phone,Industry"
+                      targetFields="{!v.AccFields}"
+                      targetError="{!v.AccErrors}"
+                      mode = "EDIT"/>
+    <div class="slds-box slds-box_xx-small">
+  <lightning:card iconName="standard:account" title="{!v.AccFields.Name}" >
+            <div class="slds-p-horizontal--small">
+                <label>PHONE</label>
+                <lightning:input title="Phone" value="{!v.AccFields.Phone}" />
+                <label>Description</label>
+                <lightning:input title="Description" value="{!v.AccFields.Description}" />
+                <label>INDUSTRY</label>
+                <lightning:input title="Industry" value="{!v.AccFields.Industry}" />
+            </div>
+        </lightning:card>
+       <lightning:button label="Save" onclick="{! c.handleClick }"/>
+</div>
+                    
+</aura:component>

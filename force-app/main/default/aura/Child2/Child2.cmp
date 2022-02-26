@@ -1,0 +1,4 @@
+<aura:component >
+		<aura:attribute name = "child2" type = "string" default = "I am Default Child 2"/>
+{!v.child2}
+</aura:component>

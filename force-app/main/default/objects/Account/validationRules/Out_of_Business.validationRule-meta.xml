@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_of_Business</fullName>
+    <active>false</active>
+    <errorConditionFormula>Prevent_Check__c == True  &amp;&amp;  Out_of_Business__c == True</errorConditionFormula>
+    <errorDisplayField>Out_of_Business__c</errorDisplayField>
+    <errorMessage>An open Opportunity is still there on this account</errorMessage>
+</ValidationRule>

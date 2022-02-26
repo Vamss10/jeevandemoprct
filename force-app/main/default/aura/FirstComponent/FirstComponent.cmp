@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access = "global">
+    <aura:attribute name ="courseFee" type ="double" default = "1"/>
+    <aura:attribute name ="courseName" type ="String" default = "AURA"/>
+    <aura:attribute name ="coursestartdate" type ="date"/>
+    COURSE NAME = "{!v.courseName}"<br/>
+    <aura:attribute name = "studentNames" type = "String[]" default = "['vishal','dipak','vivek']"/>
+    <aura:attribute name = "studentList" type = "List" default = "['visha','dipak','vivek']"/>
+    <aura:attribute name = "studentSet" type = "Set" default = "['vishal','dipak','vivek']"/>
+    <aura:attribute name = "studentMap" type = "Map" default = "{1:'vishal',2:'vivek'}"/>
+       <!-- To access the list or array normally we use for loop to print values 
+but here we use the aura iteration to print the values in the collection -->
+    <aura:iteration items = "{!v.studentNames}" var = "Sname">
+        {!Sname}<br/>
+        </aura:iteration>
+    <aura:attribute name = "names" type = "String" />
+    <aura:attribute name = "rollno" type = "integer" />
+    <aura:attribute name = "dateandtime" type = "DateTime" />
+     <lightning:textarea name="EnterName" label="EnterName" placeholder="type here..." value = "{!v.names}"/>
+    <lightning:input type="number" name="RollNumber" label="RollNumber" placeholder="type here..." value = "{!v.rollno}"/>
+ <!-- <lightning:input type="datetime" name="Dates" label="Enter a date/time value" value = "{!dateandtime}"/>-->
+The student name is {!v.names} and {!v.rollno}
+     <aura:attribute name ="number1" type = "integer" default = "20"/>
+    <aura:attribute name ="number2" type = "integer" default = "20"/>
+     <lightning:input type="number" name="no1" label="Enter a number" required = "true" value = "{!v.number1}"></lightning:input>
+ <lightning:input type="number" name="no2" label="Enter a number" required = "true" value = "{!v.number2}"></lightning:input>
+    
+The numbers are {!v.number1}  and    {!v.number2}
+    The multiplication of {!v.number1}  and    {!v.number2} is {!mult(v.number1,v.number2)}
+</aura:component>

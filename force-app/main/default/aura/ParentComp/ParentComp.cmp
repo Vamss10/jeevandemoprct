@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:handler name = "ComponentEvent" event = "c:ComponentEvent" action="{!c.handleCompEvent}"/>
+	<aura:attribute name = "Parentmessage" type = "String" default ="This is from the Parent Msg "/>
+    <aura:attribute name = "Parentmg" type = "Integer" default ="100"/>
+    {!v.Parentmessage}
+    <c:ChildComp/>
+</aura:component>

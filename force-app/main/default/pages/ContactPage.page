@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id = "lightning">
+        
+    </div>
+    <script>
+    $Lightning.use("c:ContactApp",function(){
+    $Lightning.createComponent("c:ContactComponent",{},"lightning",function(component){}});
+    </script>
+    
+    
+</apex:page>

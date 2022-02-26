@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name ="number1" type = "integer" default = "20"/>
+    <aura:attribute name ="number2" type = "integer" default = "20"/>
+    <aura:attribute name ="result" type = "double" default = "0"/>
+    <aura:attribute name ="iscalculated" type = "Boolean" default = "false"/>
+    <div class ="slds-box">
+  <lightning:input type="number" name="no1" label="Enter a number" required = "true" value = "{!v.number1}"></lightning:input>
+ <lightning:input type="number" name="no2" label="Enter a number" required = "true" value = "{!v.number2}"></lightning:input>
+    <br/>
+    
+<lightning:button variant="brand" label="Add" title="Add" onclick="{!c.addition}" />
+<lightning:button variant="brand" label="Sub" title="Sub" onclick="{!c.subtraction}" />
+<lightning:button variant="brand" label="Mul" title="Mul" onclick="{!c.multiplication}" />
+<lightning:button variant="brand" label="Div" title="Div" onclick="{!c.division}" />
+    </div>
+   <!-- <div class = "slds-box slds-theme_shade slds-theme_alert-texture">-->
+    <aura:if isTrue="{!v.iscalculated}">
+    <div class = "{!v.result > 0 ? 'slds-box slds-theme_shade slds-theme_alert-texture positive' : 'slds-box slds-theme_shade slds-theme_alert-texture negative'}">
+    The result is {!v.result}
+</div>
+        </aura:if>
+    
+</aura:component>

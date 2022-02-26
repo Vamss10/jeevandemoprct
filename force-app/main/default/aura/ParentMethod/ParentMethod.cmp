@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name = "message" type = "String" default = "This is from the parent"/>
+    <c:ChildMethod aura:id = "ChildComp" ></c:ChildMethod>
+     <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" />
+    {!v.message}
+    <c:ChildMethod/>
+</aura:component>

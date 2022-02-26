@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:registerEvent name = "ComponentEvent" type = "c:ComponentEvent"/>
+	<h1>This is H1 Tag in ChildComp</h1>
+    <p>
+        <lightning:button label="click to fire component event" onclick = "{!c.fireCompEvent}"/>
+    </p>
+</aura:component>

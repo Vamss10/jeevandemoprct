@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:handler name = "SamAccount" event = "c:CompEvent" action="{!c.handlingCompEvent}"/>
+    <aura:attribute name = "AllAccounts" type ="Account"/>
+    <c:CompChild/>
+  <!--{!AllAccounts.Name}-->
+</aura:component>
